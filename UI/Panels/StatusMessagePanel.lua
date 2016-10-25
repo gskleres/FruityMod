@@ -18,9 +18,9 @@ local DEFAULT_TIME_TO_DISPLAY	:number = 10;	-- Seconds to display the message
 
 local m_statusIM				:table = InstanceManager:new( "StatusMessageInstance", "Root", Controls.StackOfMessages );
 local m_gossipIM				:table = InstanceManager:new( "GossipMessageInstance", "Root", Controls.StackOfMessages );
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
 local m_connectionIM			:table = InstanceManager:new( "ConnectionMessageInstance", "Root", Controls.StackOfMessages);
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
 
 local PlayerConnectedChatStr	:string = Locale.Lookup( "LOC_MP_PLAYER_CONNECTED_CHAT" );
 local PlayerDisconnectedChatStr :string	= Locale.Lookup( "LOC_MP_PLAYER_DISCONNECTED_CHAT" );
@@ -37,12 +37,12 @@ local m_kMessages :table = {};
 -- =========================================================================== 
 function OnStatusMessage( str:string, fDisplayTime:number, type:number )
 
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
 	if (type == 99 or type == ReportingStatusTypes.GOSSIP or type == ReportingStatusTypes.DEFAULT) then	-- A type we handle?
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN old code
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN old code
 --	if (type == ReportingStatusTypes.DEFAULT or
 --		type == ReportingStatusTypes.GOSSIP) then	-- A type we handle?
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
 
 		local kTypeEntry :table = m_kMessages[type];
 		if (kTypeEntry == nil) then
@@ -57,21 +57,21 @@ function OnStatusMessage( str:string, fDisplayTime:number, type:number )
 			if (type == ReportingStatusTypes.GOSSIP) then
 				kTypeEntry.InstanceManager	= m_gossipIM;
 				
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
 			elseif (type == 99) then
 				kTypeEntry.InstanceManager  = m_connectionIM;
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
 				
 			else
 				kTypeEntry.InstanceManager	= m_statusIM;
 			end
 		end
 
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
 		if ( type == ReportingStatusTypes.DEFAULT ) then
 			fDisplayTime = 3;
 		end
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
 
 		local pInstance:table = kTypeEntry.InstanceManager:GetInstance();
 		table.insert( kTypeEntry.MessageInstances, pInstance );
@@ -102,11 +102,11 @@ function OnMultplayerPlayerConnected( playerID )
 	if( ContextPtr:IsHidden() == false and GameConfiguration.IsNetworkMultiplayer() ) then
 		local pPlayerConfig = PlayerConfigurations[playerID];
 		local statusMessage = pPlayerConfig:GetPlayerName() .. " " .. PlayerConnectedChatStr;
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
 		OnStatusMessage( statusMessage, DEFAULT_TIME_TO_DISPLAY, 99 );
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN old code
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN old code
 --		OnStatusMessage( statusMessage, DEFAULT_TIME_TO_DISPLAY, ReportingStatusTypes.DEFAULT );
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
 	end
 end
 
@@ -120,11 +120,11 @@ function OnMultiplayerPrePlayerDisconnected( playerID )
 		else
     		statusMessage = statusMessage .. " " .. PlayerDisconnectedChatStr;
 		end
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN begin
 		OnStatusMessage(statusMessage, DEFAULT_TIME_TO_DISPLAY, 99);
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN old code
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN old code
 --		OnStatusMessage(statusMessage, DEFAULT_TIME_TO_DISPLAY, ReportingStatusTypes.DEFAULT);
--- HB_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
+-- TAG_FIX_WAR_MESSAGE_BLOCKING_SCREEN end
 	end
 end
 

@@ -15,7 +15,7 @@ local m_isPastLoadingScreen		:boolean = false;
 
 -- ===========================================================================
 function ShowBoost(queueEntry:table)
-	do return end;	-- ouglaaa mod: remove the eureka / inspiration popup
+	do return end;	-- TAG_DISABLE_BOOST_POPUP remove the eureka / inspiration popup
 	if queueEntry.techIndex ~= nil then
 		ShowTechBoost(queueEntry.techIndex, queueEntry.iTechProgress, queueEntry.eSource);
 	else
