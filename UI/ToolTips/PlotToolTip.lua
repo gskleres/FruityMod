@@ -1,3 +1,5 @@
+-- modified by Fruitstrike 2016-10-25
+
 -- ===========================================================================
 --
 --	PlotToolTip
@@ -29,7 +31,7 @@ local OFFSET_SHOW_AT_TOUCH_X:number = -30;
 local OFFSET_SHOW_AT_TOUCH_Y:number = -35;
 local SIZE_WIDTH_MARGIN		:number = 20;
 local SIZE_HEIGHT_PADDING	:number = 20;
-local TIME_DEFAULT_PAUSE	:number = 1.1;
+local TIME_DEFAULT_PAUSE	:number = 0.25; --1.1; FRUITY_FIX_PLOT_TOOLTIP_DELAY
 
 
 -- ===========================================================================

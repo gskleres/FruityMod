@@ -1,0 +1,6 @@
+**V1**
+
+* Chopping Woods, Jungles, and Marshes now provides only 50% of the default Food or Production.
+* Deleting units is no longer possible.
+* Plot tooltip delay reduced (appears much faster).
+* Status tooltip no longer has a black box and is much smaller and compact, preventing message spam from blocking your view.

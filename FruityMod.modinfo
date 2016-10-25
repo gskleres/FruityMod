@@ -25,6 +25,7 @@
 				<File>UI/Panels/StatusMessagePanel.lua</File>
 				<File>UI/Panels/StatusMessagePanel.xml</File>
 				<File>UI/Panels/UnitPanel.lua</File>
+				<File>UI/Tooltips/PlotToolTip.lua</File>
             </Items>
         </ImportFiles>
 	</Components>
@@ -35,5 +36,6 @@
 		<File>UI/Panels/StatusMessagePanel.lua</File>
 		<File>UI/Panels/StatusMessagePanel.xml</File>
 		<File>UI/Panels/UnitPanel.lua</File>
+		<File>UI/Tooltips/PlotToolTip.lua</File>
 	</Files>
 </Mod>
