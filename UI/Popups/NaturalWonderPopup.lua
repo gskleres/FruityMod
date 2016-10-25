@@ -61,6 +61,7 @@ end
 
 -- ===========================================================================
 function ShowPopup( kData:table )
+	return ;		-- UI_QOL_Disable_NaturalWonders_Popup by ouglaaa	
 	UIManager:QueuePopup( ContextPtr, PopupPriority.Medium );
 	ShowNaturalWonderLens(true);
 	m_isWaitingToShowPopup = true;
