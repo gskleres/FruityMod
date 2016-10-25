@@ -16,9 +16,15 @@
 				<File>Data/RemoveDeletingUnits.xml</File>
 			</Items>
 		</UpdateDatabase>
+        <ImportFiles id="FRUITY_MOD_IMPORT_FILES">
+            <Items>
+				<File>UI/Panels/UnitPanel.lua</File>
+            </Items>
+        </ImportFiles>
 	</Components>
 	<Files>
 		<File>Data/ChopChanges.xml</File>
 		<File>Data/RemoveDeletingUnits.xml</File>
+		<File>UI/Panels/UnitPanel.lua</File>
 	</Files>
 </Mod>
