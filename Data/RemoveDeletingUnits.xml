@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-10-25 -->
+
+<GameInfo>
+
+	<!-- remove the UI button for deleting units -->
+	<UnitCommands>
+		<Update>
+			<Set VisibleInUI="false" />
+			<Where CommandType="UNITCOMMAND_DELETE" />
+		</Update>
+	</UnitCommands>
+
+</GameInfo>
