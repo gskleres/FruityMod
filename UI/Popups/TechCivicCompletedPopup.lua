@@ -21,6 +21,7 @@ local m_quote_audio;
 
 -- ===========================================================================
 function ShowCompletedPopup(completedPopup:table)
+	do return end; -- ouglaaa mod: remove the civic/tech completed popups
 	if completedPopup.tech ~= nil then
 		ShowTechCompletedPopup(completedPopup.player, completedPopup.tech, completedPopup.isCanceled);
         m_bIsCivic = false;
