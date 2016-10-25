@@ -1,3 +1,5 @@
+-- Modified by Fruitstrike 2016-10-25: disabled deleting units hotkey
+
 -- ===========================================================================
 --	Unit Panel Screen 
 -- ===========================================================================
@@ -81,7 +83,7 @@ local m_resizeUnitPanelPadding	:number = 18;
 local pSpyInfo = GameInfo.Units["UNIT_SPY"];
 
 local m_AttackHotkeyId			= Input.GetActionId("Attack");
-local m_DeleteHotkeyId			= Input.GetActionId("DeleteUnit");
+--local m_DeleteHotkeyId			= Input.GetActionId("DeleteUnit"); -- FRUITY_DISABLE_UNIT_DELETION
 
 -- ===========================================================================
 --	FUNCTIONS
@@ -2692,10 +2694,12 @@ function OnInputActionTriggered( actionId )
         end
 		m_kHotkeyActions[actionId](m_kHotkeyCV1[actionId], m_kHotkeyCV2[actionId]);
 	end
-    -- "Delete" Hotkey doesn't appear in UnitOperations.xml, we need to hotwire it here
-    if m_DeleteHotkeyId ~= nil and (actionId == m_DeleteHotkeyId) then
-        OnPromptToDeleteUnit();
-    end
+-- FRUITY_DISABLE_UNIT_DELETION begin
+--    -- "Delete" Hotkey doesn't appear in UnitOperations.xml, we need to hotwire it here
+--    if m_DeleteHotkeyId ~= nil and (actionId == m_DeleteHotkeyId) then
+--        OnPromptToDeleteUnit();
+--    end
+-- FRUITY_DISABLE_UNIT_DELETION end
 	-- "Attack" Hotkey is pressed; should only work if combat evaluation is displayed. There is no action for basic attacks, necissitating this special case.
 	if m_combatResults ~= nil and m_AttackHotkeyId ~= nil and (actionId == m_AttackHotkeyId) then
 		MoveUnitToPlot( UI.GetHeadSelectedUnit(), m_locX, m_locY );
