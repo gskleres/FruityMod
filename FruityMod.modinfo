@@ -26,6 +26,8 @@
 				<File>UI/Panels/StatusMessagePanel.xml</File>
 				<File>UI/Panels/UnitPanel.lua</File>
 				<File>UI/Tooltips/PlotToolTip.lua</File>
+				<File>UI/Popups/BoostUnlockedPopup.lua</File>
+				<File>UI/Popups/TechCivicCompletedPopup.lua</File>
             </Items>
         </ImportFiles>
 	</Components>
@@ -37,5 +39,7 @@
 		<File>UI/Panels/StatusMessagePanel.xml</File>
 		<File>UI/Panels/UnitPanel.lua</File>
 		<File>UI/Tooltips/PlotToolTip.lua</File>
+		<File>UI/Popups/BoostUnlockedPopup.lua</File>
+		<File>UI/Popups/TechCivicCompletedPopup.lua</File>
 	</Files>
 </Mod>
