@@ -4,6 +4,7 @@
 <GameInfo>
 
 	<!-- remove the UI button for deleting units -->
+	<!-- also requires code in /UI/Panels/UnitPanel.lua under the tag FRUITY_DISABLE_UNIT_DELETION -->
 	<UnitCommands>
 		<Update>
 			<Set VisibleInUI="false" />

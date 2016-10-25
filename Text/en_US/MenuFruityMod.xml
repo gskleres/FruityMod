@@ -5,14 +5,12 @@
 
 	<!-- Add text to show Fruity Mod is enabled -->
 	<FrontEndText>
-		<Update>
-			<Set Text="Staging Room (Fruity Mod enabled)" />
-			<Where Tag="LOC_MULTIPLAYER_STAGING_ROOM" />
-		</Update>
-		<Update>
-			<Set Text="Create Game (Fruity Mod enabled)" />
-			<Where Tag="LOC_SETUP_CREATE_GAME" />
-		</Update>
+		<Replace Tag="LOC_MULTIPLAYER_STAGING_ROOM" Language="en_US">
+		  <Text>Staging Room (Fruity Mod enabled)</Text>
+		</Replace>
+		<Replace Tag="LOC_SETUP_CREATE_GAME" Language="en_US">
+		  <Text>Create Game (Fruity Mod enabled)</Text>
+		</Replace>
 	</FrontEndText>
 
 </GameData>
