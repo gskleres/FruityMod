@@ -2,9 +2,9 @@
 	<Mod id="01234567-FFFF-FFFF-FFFF-FFFFFFFFFFFF" version="1">
 	<Properties>
 		<Name>Fruity Mod</Name>
-		<Teaser>Civ 6 Multiplayer Balance Mod, authored by Fruitstrike, NotQue, HellBlazer, Delnar_Ersike, and ouglaaa</Teaser>
+		<Teaser>Civ 6 Multiplayer Balance Mod, authored by Fruitstrike, notQ, HellBlazer, Delnar_Ersike, and ouglaaa</Teaser>
 		<Description>Contains gameplay changes to help balance the game for a competitive multiplayer environment.</Description>
-		<Authors>Fruitstrike, NotQue, HellBlazer, Delnar_Ersike, ouglaaa</Authors>
+		<Authors>Fruitstrike, notQ, HellBlazer, Delnar_Ersike, ouglaaa</Authors>
 		<EnabledByDefault>1</EnabledByDefault>
 		<EnabledAtStartup>1</EnabledAtStartup>
 	</Properties>
