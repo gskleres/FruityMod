@@ -22,6 +22,8 @@
 		</LocalizedText>
         <ImportFiles id="FRUITY_MOD_IMPORT_FILES">
             <Items>
+				<File>UI/Panels/StatusMessagePanel.lua</File>
+				<File>UI/Panels/StatusMessagePanel.xml</File>
 				<File>UI/Panels/UnitPanel.lua</File>
             </Items>
         </ImportFiles>
@@ -30,6 +32,8 @@
 		<File>Data/ChopChanges.xml</File>
 		<File>Data/RemoveDeletingUnits.xml</File>
 		<File>Text/en_US/MenuFruityMod.xml</File>
+		<File>UI/Panels/StatusMessagePanel.lua</File>
+		<File>UI/Panels/StatusMessagePanel.xml</File>
 		<File>UI/Panels/UnitPanel.lua</File>
 	</Files>
 </Mod>

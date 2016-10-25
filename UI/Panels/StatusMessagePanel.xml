@@ -6,10 +6,22 @@
      <Stack ID="StackOfMessages" Anchor="C,T" StackGrowth="Bottom" Offset="0,120"/>
   </Container>
   
+	<!-- default status message now uses style of HBBodyText - this is to prevent spam during war -->
 	<Instance							Name="StatusMessageInstance">
+    <Container					ID="Root"					Anchor="C,T" Size="650,20" AutoSize="V">
+      <AlphaAnim				ID="Anim"					Anchor="C,T" AlphaBegin="0" AlphaEnd="1" Speed="3"  Size="650,20" Cycle="OneBounce" EndPause="10" AutoSize="V">
+        <Grid															Anchor="C,T" Style="EnhancedToolTip" MinSize="54,20" Size="parent+10,parent-10" Color="255,255,255,0" AutoSize="V" InnerPadding="10,10">
+          <Label				ID="StatusLabel"	Anchor="C,C" Style="BlueGlow" Offset="0,-2" WrapWidth="parent-20" />
+        </Grid>
+      </AlphaAnim>
+    </Container>
+	</Instance>
+	
+	<!-- connection messages were given a new type and will use this box instead -->
+	<Instance							Name="ConnectionMessageInstance">
     <Container					ID="Root"					Anchor="C,T" Size="650,40" AutoSize="V">
       <AlphaAnim				ID="Anim"					Anchor="C,T" AlphaBegin="0" AlphaEnd="1" Speed="3"  Size="650,parent" Cycle="OneBounce" EndPause="10" AutoSize="V">
-        <Grid															Anchor="C,T" Style="EnhancedToolTip" MinSize="54,54" Size="parent+10,parent-10" Color="255,255,255,255" AutoSize="V" InnerPadding="10,30">
+        <Grid															Anchor="C,T" Style="EnhancedToolTip" MinSize="54,54" Size="parent+10,parent-10" Color="255,255,255,0" AutoSize="V" InnerPadding="10,30">
           <Label				ID="StatusLabel"	Anchor="C,C" Style="BodyText18" Offset="0,-2" WrapWidth="parent-20" />
         </Grid>
       </AlphaAnim>
