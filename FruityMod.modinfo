@@ -28,7 +28,7 @@
 				<File>UI/Tooltips/PlotToolTip.lua</File>
 				<File>UI/Popups/BoostUnlockedPopup.lua</File>
 				<File>UI/Popups/TechCivicCompletedPopup.lua</File>
-				<File>UI/Popups/NaturalWonderPopup.lua</File> <!-- UI_QOL_Disable_NaturalWonders_Popup by ouglaaa  -->
+				<File>UI/Popups/NaturalWonderPopup.lua</File> <!-- TAG_REMOVE_NATURAL_WONDER_POPUP by ouglaaa  -->
             </Items>
         </ImportFiles>
 	</Components>
