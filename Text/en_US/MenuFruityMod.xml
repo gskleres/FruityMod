@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-10-25 -->
+
+<GameData>
+
+	<!-- Add text to show Fruity Mod is enabled -->
+	<FrontEndText>
+		<Update>
+			<Set Text="Staging Room (Fruity Mod enabled)" />
+			<Where Tag="LOC_MULTIPLAYER_STAGING_ROOM" />
+		</Update>
+		<Update>
+			<Set Text="Create Game (Fruity Mod enabled)" />
+			<Where Tag="LOC_SETUP_CREATE_GAME" />
+		</Update>
+	</FrontEndText>
+
+</GameData>

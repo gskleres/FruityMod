@@ -13,6 +13,7 @@
 			<Items>
 				<File>Data/ChopChanges.xml</File>
 				<File>Data/RemoveDeletingUnits.xml</File>
+				<File>Text/en_US/MenuFruityMod.xml</File>
 			</Items>
 		</UpdateDatabase>
         <ImportFiles id="FRUITY_MOD_IMPORT_FILES">
@@ -25,5 +26,6 @@
 		<File>Data/ChopChanges.xml</File>
 		<File>Data/RemoveDeletingUnits.xml</File>
 		<File>UI/Panels/UnitPanel.lua</File>
+		<File>Text/en_US/MenuFruityMod.xml</File>
 	</Files>
 </Mod>
