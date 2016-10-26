@@ -174,7 +174,7 @@ function Initialize()
 	Controls.Close:RegisterCallback(Mouse.eLClick, OnClose);
 	Controls.WonderRevealedHeader:SetText( Locale.ToUpper( Locale.Lookup("LOC_UI_FEATURE_NATURAL_WONDER_DISCOVERY")) )
 	
-	--Events.NaturalWonderRevealed.Add(OnNaturalWonderRevealed);
+	--Events.NaturalWonderRevealed.Add(OnNaturalWonderRevealed); -- TAG_REMOVE_NATURAL_WONDER_POPUP by ouglaaa	
 	Events.LocalPlayerTurnEnd.Add( OnLocalPlayerTurnEnd );
 end
 Initialize();
