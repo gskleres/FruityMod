@@ -61,7 +61,7 @@ end
 
 -- ===========================================================================
 function ShowPopup( kData:table )
-	return ;		-- TAG_REMOVE_NATURAL_WONDER_POPUP by ouglaaa	
+	do return end;		-- TAG_REMOVE_NATURAL_WONDER_POPUP by ouglaaa	
 	UIManager:QueuePopup( ContextPtr, PopupPriority.Medium );
 	ShowNaturalWonderLens(true);
 	m_isWaitingToShowPopup = true;
